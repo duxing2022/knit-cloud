@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /knit-cloud-mvc-config
+spring:
+  application:
+    name: knit-cloud-mvc-config
+  # mysql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.196.124.96:3306/aurora?serverTimezone=UTC
+    username: root
+    password: 123
+  # redis
+  redis:
+    host: 139.196.124.96
+    database: 0
+    port: 9527
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: 1ms
+        min-idle: 0
+    password: "0625"
