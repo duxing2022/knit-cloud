@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  * 通用响应对象定义
@@ -42,5 +43,9 @@ public class CommonResponse<T> implements Serializable {
     public CommonResponse(Integer code, String message) {
         this.code = code;
         this.message = message;
+    }
+
+
+    public static CommonResponse success(int i, String 登录成功, Map<String, String> map) {
     }
 }
