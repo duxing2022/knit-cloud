@@ -10,6 +10,7 @@
     <modules>
         <module>knit-cloud-common</module>
         <module>knit-cloud-mvc-config</module>
+        <module>knit-cloud-boot</module>
     </modules>
 
     <packaging>pom</packaging>
