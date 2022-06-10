@@ -1,10 +1,10 @@
 server:
   port: 8080
   servlet:
-    context-path: /knit-cloud-mvc-config
+    context-path: /knit-cloud-boot
 spring:
   application:
-    name: knit-cloud-mvc-config
+    name: knit-cloud-boot
   # mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
