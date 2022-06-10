@@ -15,14 +15,10 @@
 
     <!-- 模块名及描述信息 -->
     <name>knit-cloud-mvc-config</name>
-    <description>通用配置模块</description>
+    <description>配置模块</description>
 
     <dependencies>
         <!-- 引入 Web 功能 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>com.sn.knit</groupId>
             <artifactId>knit-cloud-common</artifactId>
@@ -59,11 +55,6 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>3.4.3</version>
-        </dependency>
-         <!-- 引入 mysql 功能 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
         </dependency>
     </dependencies>
 </project>
