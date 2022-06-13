@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>knit-cloud</artifactId>
-        <groupId>com.sn.knit</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>knit-cloud-common</artifactId>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>knit-cloud</artifactId>
+    <groupId>com.sn.knit</groupId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
 
-     <!-- 模块名及描述信息 -->
-    <name>knit-cloud-common</name>
-    <description>通用模块</description>
+  <artifactId>knit-cloud-common</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <!-- 模块名及描述信息 -->
+  <name>knit-cloud-common</name>
+  <description>通用模块</description>
 </project>

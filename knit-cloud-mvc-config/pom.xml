@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <parent>
-        <artifactId>knit-cloud</artifactId>
-        <groupId>com.sn.knit</groupId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>knit-cloud-mvc-config</artifactId>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>knit-cloud</artifactId>
+    <groupId>com.sn.knit</groupId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
 
-    <!-- 模块名及描述信息 -->
-    <name>knit-cloud-mvc-config</name>
-    <description>配置模块</description>
+  <artifactId>knit-cloud-mvc-config</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
-    <dependencies>
-        <!-- 引入 Web 功能 -->
-        <dependency>
-            <groupId>com.sn.knit</groupId>
-            <artifactId>knit-cloud-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <!-- 引入 SpringSecurity 功能 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <!-- 引入 redis 功能 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-pool2</artifactId>
-        </dependency>
-        <!-- 引入 fastJson 功能 -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.33</version>
-        </dependency>
-        <!-- 引入 jwt 功能 -->
-        <dependency>
-            <groupId>io.jsonwebtoken</groupId>
-            <artifactId>jjwt</artifactId>
-            <version>0.9.0</version>
-        </dependency>
-         <!-- 引入 MybatisPlus 功能 -->
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.3</version>
-        </dependency>
-    </dependencies>
+  <!-- 模块名及描述信息 -->
+  <name>knit-cloud-mvc-config</name>
+  <description>配置模块</description>
+
+  <dependencies>
+    <!-- 引入 Web 功能 -->
+    <dependency>
+      <groupId>com.sn.knit</groupId>
+      <artifactId>knit-cloud-common</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <!-- 引入 SpringSecurity 功能 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-security</artifactId>
+    </dependency>
+    <!-- 引入 redis 功能 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-pool2</artifactId>
+    </dependency>
+    <!-- 引入 fastJson 功能 -->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.33</version>
+    </dependency>
+    <!-- 引入 jwt 功能 -->
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt</artifactId>
+      <version>0.9.0</version>
+    </dependency>
+    <!-- 引入 MybatisPlus 功能 -->
+    <dependency>
+      <groupId>com.baomidou</groupId>
+      <artifactId>mybatis-plus-boot-starter</artifactId>
+      <version>3.4.3</version>
+    </dependency>
+  </dependencies>
 </project>
