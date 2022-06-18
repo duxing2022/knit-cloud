@@ -11,7 +11,7 @@
     <module>knit-cloud-common</module>
     <module>knit-cloud-mvc-config</module>
     <module>knit-cloud-service</module>
-    <module>knit-cloud-account-service</module>
+    <module>knit-cloud-alibaba-nacos-client</module>
   </modules>
 
   <packaging>pom</packaging>
