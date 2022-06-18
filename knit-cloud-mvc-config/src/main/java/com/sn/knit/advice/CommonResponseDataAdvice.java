@@ -24,7 +24,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
      * 判断是否需要对响应进行处理
      *
      * @param methodParameter 方法参数
-     * @param aClass          a类
+     * @param aClass          clazz
      * @return boolean
      */
     @Override

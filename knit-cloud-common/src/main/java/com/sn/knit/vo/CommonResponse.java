@@ -35,5 +35,4 @@ public class CommonResponse<T> implements Serializable {
         this.code = code;
         this.message = message;
     }
-
 }
