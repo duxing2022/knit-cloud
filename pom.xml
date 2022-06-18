@@ -10,7 +10,8 @@
   <modules>
     <module>knit-cloud-common</module>
     <module>knit-cloud-mvc-config</module>
-    <module>knit-cloud-boot</module>
+    <module>knit-cloud-service</module>
+    <module>knit-cloud-account-service</module>
   </modules>
 
   <packaging>pom</packaging>
@@ -88,6 +89,7 @@
   <!-- 项目依赖管理 父项目只是声明依赖，子项目需要写明需要的依赖(可以省略版本信息) -->
   <dependencyManagement>
     <dependencies>
+
       <!-- spring cloud 依赖 -->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
