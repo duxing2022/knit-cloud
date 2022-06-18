@@ -12,6 +12,7 @@
     <module>knit-cloud-mvc-config</module>
     <module>knit-cloud-service</module>
     <module>knit-cloud-alibaba-nacos-client</module>
+    <module>knit-cloud-admin</module>
   </modules>
 
   <packaging>pom</packaging>
