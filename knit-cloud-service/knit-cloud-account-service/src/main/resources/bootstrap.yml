@@ -8,9 +8,9 @@ spring:
   # mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://139.196.124.96:3306/aurora?serverTimezone=UTC
+    url: jdbc:mysql://139.196.124.96:3306/knit?serverTimezone=UTC
     username: root
-    password: 123
+    password: abc123
   # redis
   redis:
     host: 139.196.124.96
