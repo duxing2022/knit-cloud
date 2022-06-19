@@ -10,16 +10,18 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 /**
  * <h1>配置安全认证, 以便其他的微服务可以注册</h1>
  * 参考 Spring Security 官方
+ *
+ * @author Administrator
  */
 @Configuration
-public class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 应用上下文路径
      */
     private final String adminContextPath;
 
-    public SecuritySecureConfig(AdminServerProperties adminServerProperties) {
+    public SecurityConfig(AdminServerProperties adminServerProperties) {
 
         this.adminContextPath = adminServerProperties.getContextPath();
     }
