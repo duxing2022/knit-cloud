@@ -6,6 +6,19 @@ server:
 spring:
   application:
     name: knit-cloud-nacos-client # 应用名称也是构成 Nacos 配置管理 dataId 字段的一部分 (当 config.prefix 为空时)
+  # redis
+  redis:
+    host: 139.196.124.96
+    port: 9527
+    database: 0
+    lettuce:
+      pool:
+        minIdle: 1
+        maxIdle: 10
+        maxWait: -1ms
+        maxActive: 8
+    timeout: 5000
+    password: '0625'
   cloud:
     nacos:
       # 服务注册发现

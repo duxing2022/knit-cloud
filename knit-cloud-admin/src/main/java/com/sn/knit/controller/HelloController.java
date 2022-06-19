@@ -17,7 +17,6 @@ public class HelloController {
 
     @GetMapping("/hello")
     public CommonResponse<String> hello() {
-        int i = 1/0;
         return CommonResponse.success("hello");
     }
 }
