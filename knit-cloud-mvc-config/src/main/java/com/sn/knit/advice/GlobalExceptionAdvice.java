@@ -1,6 +1,5 @@
 package com.sn.knit.advice;
 
-import com.sn.knit.constant.CommonConstant;
 import com.sn.knit.vo.CommonResponse;
 import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
@@ -34,8 +33,7 @@ public class GlobalExceptionAdvice {
     public CommonResponse<String> handleGlobalException(HttpServletRequest request,
             Exception exception) {
 
-        CommonResponse<String> response = new CommonResponse<>(CommonConstant.ERROR_CODE,
-                "business error");
+        CommonResponse<String> response = CommonResponse.error(null);
         response.setData(exception.getMessage());
         log.error("commerce service has error: [{}]", exception.getMessage(), exception);
 

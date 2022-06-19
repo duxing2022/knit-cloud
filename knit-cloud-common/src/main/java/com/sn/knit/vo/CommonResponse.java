@@ -1,5 +1,6 @@
 package com.sn.knit.vo;
 
+import com.sn.knit.enumeration.ResultCodeEnum;
 import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,7 +20,7 @@ public class CommonResponse<T> implements Serializable {
     /**
      * code
      */
-    private Integer code;
+    private String code;
 
     /**
      * 消息
@@ -31,8 +32,30 @@ public class CommonResponse<T> implements Serializable {
      */
     private T data;
 
-    public CommonResponse(Integer code, String message) {
-        this.code = code;
-        this.message = message;
+    public CommonResponse(ResultCodeEnum codeEnum) {
+        this.code = codeEnum.getCode();
+        this.message = codeEnum.getMessage();
+    }
+
+    public CommonResponse(ResultCodeEnum codeEnum, T data) {
+        this.code = codeEnum.getCode();
+        this.message = codeEnum.getMessage();
+        this.data = data;
+    }
+
+    public static <T> CommonResponse<T> success() {
+        return new CommonResponse<>(ResultCodeEnum.SUCCESS);
+    }
+
+    public static <T> CommonResponse<T> success(T data) {
+        return new CommonResponse<>(ResultCodeEnum.SUCCESS, data);
+    }
+
+    public static <T> CommonResponse<T> error() {
+        return new CommonResponse<>(ResultCodeEnum.FAIL);
+    }
+
+    public static <T> CommonResponse<T> error(T data) {
+        return new CommonResponse<>(ResultCodeEnum.FAIL, data);
     }
 }

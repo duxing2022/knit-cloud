@@ -1,6 +1,7 @@
 package com.sn.knit.advice;
 
 import com.sn.knit.annotation.IgnoreResponseAdvice;
+import com.sn.knit.enumeration.ResultCodeEnum;
 import com.sn.knit.vo.CommonResponse;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -52,7 +53,7 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
             Class<? extends HttpMessageConverter<?>> aClass, ServerHttpRequest serverHttpRequest,
             ServerHttpResponse serverHttpResponse) {
         // 定义最终的返回对象
-        CommonResponse<Object> response = new CommonResponse<>(0, "");
+        CommonResponse<Object> response = CommonResponse.success(ResultCodeEnum.SUCCESS);
 
         if (null == o) {
             return response;
