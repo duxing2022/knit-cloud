@@ -100,7 +100,8 @@ public class JWTServiceImpl implements IJWTService {
 
         KnitUser knitUser = new KnitUser();
         knitUser.setUsername(usernameAndPassword.getUsername());
-        knitUser.setPassword(usernameAndPassword.getPassword());   // MD5 编码以后
+        // MD5 编码以后
+        knitUser.setPassword(usernameAndPassword.getPassword());
         knitUser.setExtraInfo("{}");
 
         // 注册一个新用户, 写一条记录到数据表中
