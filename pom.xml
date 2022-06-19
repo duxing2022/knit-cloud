@@ -13,6 +13,7 @@
     <module>knit-cloud-service</module>
     <module>knit-cloud-alibaba-nacos-client</module>
     <module>knit-cloud-admin</module>
+    <module>knit-cloud-authority-center</module>
   </modules>
 
   <packaging>pom</packaging>
