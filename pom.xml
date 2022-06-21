@@ -14,6 +14,7 @@
     <module>knit-cloud-alibaba-nacos-client</module>
     <module>knit-cloud-admin</module>
     <module>knit-cloud-authority-center</module>
+    <module>knit-cloud-gateway</module>
   </modules>
 
   <packaging>pom</packaging>
