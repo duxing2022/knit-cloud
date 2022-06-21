@@ -32,8 +32,6 @@ spring:
         metadata:
           management:
             context-path: ${server.servlet.context-path}/actuator
-          user.name: ssh
-          user.password: 123456
   thymeleaf:
     check-template: false
     check-template-location: false
