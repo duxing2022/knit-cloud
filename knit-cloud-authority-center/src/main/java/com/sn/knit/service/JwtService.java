@@ -9,7 +9,7 @@ import com.sn.knit.vo.UsernameAndPassword;
  * @author Administrator
  * @date 2022/06/19
  */
-public interface IJWTService {
+public interface JwtService {
 
     /**
      * 生成 JWT Token, 使用默认的超时时间
@@ -26,7 +26,7 @@ public interface IJWTService {
      *
      * @param username 用户名
      * @param password 密码
-     * @param expire   失效
+     * @param expire 失效
      * @return {@link String}
      * @throws Exception 异常
      */

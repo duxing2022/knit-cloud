@@ -5,7 +5,7 @@ import com.sn.knit.constant.AuthorityConstant;
 import com.sn.knit.constant.CommonConstant;
 import com.sn.knit.dao.KnitUserDao;
 import com.sn.knit.entity.KnitUser;
-import com.sn.knit.service.IJWTService;
+import com.sn.knit.service.JwtService;
 import com.sn.knit.vo.LoginUserInfo;
 import com.sn.knit.vo.UsernameAndPassword;
 import io.jsonwebtoken.Jwts;
@@ -33,11 +33,11 @@ import sun.misc.BASE64Decoder;
 @Slf4j
 @Service
 @Transactional(rollbackFor = Exception.class)
-public class JWTServiceImpl implements IJWTService {
+public class JwtServiceImpl implements JwtService {
 
     private final KnitUserDao knitUserDao;
 
-    public JWTServiceImpl(KnitUserDao knitUserDao) {
+    public JwtServiceImpl(KnitUserDao knitUserDao) {
         this.knitUserDao = knitUserDao;
     }
 
@@ -48,8 +48,7 @@ public class JWTServiceImpl implements IJWTService {
     }
 
     @Override
-    public String generateToken(String username, String password, int expire)
-            throws Exception {
+    public String generateToken(String username, String password, int expire) throws Exception {
 
         // 首先需要验证用户是否能够通过授权校验, 即输入的用户名和密码能否匹配数据表记录
         KnitUser knitUser = knitUserDao.findByUsernameAndPassword(

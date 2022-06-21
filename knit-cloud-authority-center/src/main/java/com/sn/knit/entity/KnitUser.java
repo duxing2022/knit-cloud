@@ -17,7 +17,9 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 /**
- * <h1>用户表实体类定义</h1>
+ * 用户表实体类定义
+ *
+ * @author shenghua.song
  */
 @Data
 @NoArgsConstructor

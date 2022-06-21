@@ -2,10 +2,11 @@ package com.sn.knit.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.sn.knit.annotation.IgnoreResponseAdvice;
-import com.sn.knit.service.IJWTService;
+import com.sn.knit.service.JwtService;
 import com.sn.knit.vo.CommonResponse;
 import com.sn.knit.vo.JwtToken;
 import com.sn.knit.vo.UsernameAndPassword;
+import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,11 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/authority")
 public class AuthorityController {
 
-    private final IJWTService ijwtService;
-
-    public AuthorityController(IJWTService ijwtService) {
-        this.ijwtService = ijwtService;
-    }
+    @Resource
+    private JwtService jwtService;
 
     /**
      * 从授权中心获取 Token (其实就是登录功能), 且返回信息中没有统一响应的包装
@@ -39,7 +37,7 @@ public class AuthorityController {
 
         log.info("request to get token with param: [{}]",
                 JSON.toJSONString(usernameAndPassword));
-        return CommonResponse.success(new JwtToken(ijwtService.generateToken(
+        return CommonResponse.success(new JwtToken(jwtService.generateToken(
                 usernameAndPassword.getUsername(),
                 usernameAndPassword.getPassword()
         )));
@@ -53,11 +51,8 @@ public class AuthorityController {
     public CommonResponse<JwtToken> register(@RequestBody UsernameAndPassword usernameAndPassword)
             throws Exception {
 
-        log.info("register user with param: [{}]", JSON.toJSONString(
-                usernameAndPassword
-        ));
-        return CommonResponse.success(new JwtToken(ijwtService.registerUserAndGenerateToken(
-                usernameAndPassword
-        )));
+        log.info("register user with param: [{}]", JSON.toJSONString(usernameAndPassword));
+        return CommonResponse.success(
+                new JwtToken(jwtService.registerUserAndGenerateToken(usernameAndPassword)));
     }
 }
