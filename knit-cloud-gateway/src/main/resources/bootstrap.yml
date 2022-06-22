@@ -16,6 +16,29 @@ spring:
         metadata:
           management:
             context-path: ${server.servlet.context-path}/actuator
+  # 静态路由
+  #    gateway:
+  #      routes:
+  #        - id: path_route # 路由的ID
+  #          uri: 127.0.0.1:8080/user/{id} # 匹配后路由地址
+  #          predicates: # 断言, 路径相匹配的进行路由
+  #            - Path=/user/{id}
+  main:
+    allow-bean-definition-overriding: true  # 因为将来会引入很多依赖, 难免有重名的 bean
+
+  # redis
+  redis:
+    host: 139.196.124.96
+    port: 9527
+    database: 0
+    lettuce:
+      pool:
+        minIdle: 1
+        maxIdle: 10
+        maxWait: -1ms
+        maxActive: 8
+    timeout: 5000
+    password: '0625'
 # 暴露端点
 management:
   endpoints:
