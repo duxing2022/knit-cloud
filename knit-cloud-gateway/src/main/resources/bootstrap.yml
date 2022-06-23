@@ -39,6 +39,14 @@ spring:
         maxActive: 8
     timeout: 5000
     password: '0625'
+
+# 这个地方独立配置, 是网关的数据, 代码 GatewayConfig.java 中读取被监听
+nacos:
+  gateway:
+    route:
+      config:
+        data-id: knit-cloud-gateway-router
+        group: knit-cloud
 # 暴露端点
 management:
   endpoints:
