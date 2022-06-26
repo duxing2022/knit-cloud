@@ -29,6 +29,11 @@
       <artifactId>knit-cloud-mvc-config</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
+    <!-- 集成 hystrix -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+    </dependency>
   </dependencies>
 
   <!--
