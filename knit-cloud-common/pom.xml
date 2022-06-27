@@ -16,4 +16,12 @@
   <!-- 模块名及描述信息 -->
   <name>knit-cloud-common</name>
   <description>通用模块</description>
+
+  <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
+  </properties>
+
 </project>
