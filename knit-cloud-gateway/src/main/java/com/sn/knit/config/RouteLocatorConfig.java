@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Configuration;
 public class RouteLocatorConfig {
 
     /**
-     * <h2>使用代码定义路由规则, 在网关层面拦截下登录和注册接口</h2>
+     * 使用代码定义路由规则, 在网关层面拦截下登录和注册接口
      * */
     @Bean
     public RouteLocator loginRouteLocator(RouteLocatorBuilder builder) {
@@ -24,10 +24,10 @@ public class RouteLocatorConfig {
         // 手动定义 Gateway 路由规则需要指定 id、path 和 uri
         return builder.routes()
                 .route(
-                        "knit-cloud-authority-center",
+                        "knit-cloud-authority",
                         r -> r.path(
-                                "/authority/login",
-                                "/authority/register"
+                                "/knit/knit-cloud/login",
+                                "/knit/knit-cloud/register"
                                 ).uri("http://localhost:9001/")
                 ).build();
     }
