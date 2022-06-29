@@ -9,8 +9,8 @@ import io.jsonwebtoken.Jwts;
 import java.security.KeyFactory;
 import java.security.PublicKey;
 import java.security.spec.X509EncodedKeySpec;
+import java.util.Base64;
 import java.util.Calendar;
-import sun.misc.BASE64Decoder;
 
 /**
  * WT Token 解析工具类
@@ -58,7 +58,7 @@ public class TokenParseUtil {
     private static PublicKey getPublicKey() throws Exception {
 
         X509EncodedKeySpec keySpec = new X509EncodedKeySpec(
-                new BASE64Decoder().decodeBuffer(CommonConstant.PUBLIC_KEY)
+                Base64.getDecoder().decode(CommonConstant.PUBLIC_KEY)
         );
         return KeyFactory.getInstance("RSA").generatePublic(keySpec);
     }

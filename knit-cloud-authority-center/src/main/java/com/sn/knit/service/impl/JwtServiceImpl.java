@@ -17,12 +17,12 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Base64;
 import java.util.Date;
 import java.util.UUID;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import sun.misc.BASE64Decoder;
 
 /**
  * <h1>JWT 相关服务接口实现</h1>
@@ -118,7 +118,7 @@ public class JwtServiceImpl implements JwtService {
     private PrivateKey getPrivateKey() throws Exception {
 
         PKCS8EncodedKeySpec priPKCS8 = new PKCS8EncodedKeySpec(
-                new BASE64Decoder().decodeBuffer(AuthorityConstant.PRIVATE_KEY));
+                Base64.getDecoder().decode(AuthorityConstant.PRIVATE_KEY));
         KeyFactory keyFactory = KeyFactory.getInstance("RSA");
         return keyFactory.generatePrivate(priPKCS8);
     }
